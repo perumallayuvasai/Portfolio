@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuva Sai | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="yuvasai.JPG" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
+        <h1><a href="#hero">Yuva Sai</a></h1>
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section with Video Background -->
+      <section id="hero" aria-labelledby="hero-heading">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source
+            src="https://assets.mixkit.co/videos/preview/mixkit-digital-binary-code-animated-28809-large.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h2 id="hero-heading">Hi, I'm Yuva Sai Perumalla</h2>
+          <p>Full-Stack Developer & Cloud Enthusiast</p>
+
+          <!-- Action Buttons -->
+          <div class="hero-buttons">
+            <button
+              onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+              class="btn-primary"
+              aria-label="Scroll to Contact section"
+            >
+              Contact Me
+            </button>
+            <a
+              href="resume/Yuva_Sai_Resume.pdf"
+              download="Yuva_Sai_Resume.pdf"
+              class="btn-secondary"
+              aria-label="Download Resume"
+            >
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <div class="about-container">
+          <picture>
+            <source srcset="images/yuvasai.jpg" media="(min-width: 800px)" />
+            <img
+              src="profile-small.jpg"
+              alt="Yuva Sai - Full-Stack Developer"
+              class="profile-pic"
+              loading="lazy"
+            />
+          </picture>
+          <div class="about-text">
+            <p>
+              I am a Computer Science student passionate about Java, Python, and
+              AI-based applications. I love building impactful software projects
+              and exploring cloud technologies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Aside Section -->
+      <aside aria-labelledby="highlights-heading">
+        <h3 id="highlights-heading">Quick Highlights</h3>
+        <ul>
+          <li>Certified in Google Cloud & Microsoft Azure</li>
+          <li>Skilled in Java, Python, SQL, and Spring Boot</li>
+          <li>Pursuing B.Tech at VIT University</li>
+          <li>Software Consultant at Encora</li>
+        </ul>
+      </aside>
+
+      <!-- Skills Section -->
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">My Skills</h2>
+
+        <div class="skills-wrapper">
+          <!-- LEFT – Technical Skills -->
+          <div class="skills-col">
+            <h3 class="skills-subtitle">Technical Skills</h3>
+
+            <div class="skill-item">
+              <label for="java-skill">Java</label>
+              <meter id="java-skill" value="0.9" min="0" max="1">90%</meter>
+            </div>
+
+            <div class="skill-item">
+              <label for="python-skill">Python</label>
+              <meter id="python-skill" value="0.6" min="0" max="1">60%</meter>
+            </div>
+
+            <div class="skill-item">
+              <label for="sql-skill">SQL</label>
+              <meter id="sql-skill" value="0.8" min="0" max="1">80%</meter>
+            </div>
+
+            <div class="skill-item">
+              <label for="spring-skill">Spring Boot</label>
+              <meter id="spring-skill" value="0.6" min="0" max="1">60%</meter>
+            </div>
+          </div>
+
+          <!-- RIGHT – Languages -->
+          <div class="skills-col">
+            <h3 class="skills-subtitle">Languages</h3>
+
+            <div class="skill-item">
+              <label for="lang-telugu">Telugu</label>
+              <meter id="lang-telugu" value="1.0" min="0" max="1">100%</meter>
+            </div>
+
+            <div class="skill-item">
+              <label for="lang-hindi">Hindi</label>
+              <meter id="lang-hindi" value="0.8" min="0" max="1">80%</meter>
+            </div>
+
+            <div class="skill-item">
+              <label for="lang-english">English</label>
+              <meter id="lang-english" value="1.0" min="0" max="1">100%</meter>
+            </div>
+
+            <div class="skill-item">
+              <label for="lang-spanish">Spanish</label>
+              <meter id="lang-spanish" value="0.2" min="0" max="1">20%</meter>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="grid">
+          <article class="card" data-type="web">
+            <img
+              src="images/emp-system.jpeg"
+              alt="Employee Management System Dashboard"
+              loading="lazy"
+            />
+            <h3>Employee Management System</h3>
+            <p>
+              Java + MySQL-based CRUD application with role-based access,
+              search, and export features.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn" target="_blank">Demo</a>
+              <a href="https://github.com/perumallayuvasai/Employee_Management_System" class="btn secondary" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card" data-type="ml">
+            <img
+              src="images/churn-prediction.jpeg"
+              alt="Customer Churn Prediction Model"
+              loading="loading"
+            />
+            <h3>Customer Churn Prediction</h3>
+            <p>
+              Machine Learning model using XGBoost & Logistic Regression.
+              Achieved 92% accuracy with feature engineering.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn" target="_blank">Demo</a>
+              <a href="#" class="btn secondary" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card" data-type="ml">
+            <img
+              src="images/movie_recommender.jpeg"
+              alt="Movie Recommender System Interface"
+              loading="lazy"
+            />
+            <h3>Movie Recommender System</h3>
+            <p>
+              Content & collaborative filtering using Scikit-learn. Deployed
+              with Streamlit for interactive user experience.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://your-movie-recommender.streamlit.app"
+                class="btn"
+                target="_blank"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/perumallayuvasai/Movie-Recommender-System"
+                class="btn secondary"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </article>
+
+          <article class="card" data-type="ai">
+            <img
+              src="images/facial_recognition.jpeg"
+              alt="Facial Recognition Authentication"
+              loading="lazy"
+            />
+            <h3>Facial Recognition & Database Integration</h3>
+            <p>
+              Secure face authentication using OpenCV + Face Recognition.
+              Real-time Firebase sync for attendance & access logs.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://your-facial-recognition.web.app"
+                class="btn"
+                target="_blank"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/perumallayuvasai/Facial-Recognition-with-database-integration-using-python"
+                class="btn secondary"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Timeline Section -->
+      <section id="timeline" aria-labelledby="timeline-heading">
+        <h2 id="timeline-heading">My Journey</h2>
+        <div class="timeline-container">
+          <!-- Event 1 -->
+          <div class="timeline-item" data-year="2021">
+            <div class="timeline-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content left">
+              <time datetime="2021-07" class="timeline-year">2021</time>
+              <h3>Joined VIT University</h3>
+              <p>
+                Began B.Tech in Computer Science with a focus on AI, Cloud, and
+                Full-Stack Development.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="timeline-item" data-year="2023">
+            <div class="timeline-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="timeline-content right">
+              <time datetime="2023-12" class="timeline-year">2023</time>
+              <h3>Certified in Google Cloud & Microsoft Azure</h3>
+              <p>
+                Earned professional certifications in cloud architecture,
+                deployment, and DevOps practices.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="timeline-item" data-year="2025">
+            <div class="timeline-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="timeline-content left">
+              <time datetime="2025-05" class="timeline-year">2025</time>
+              <h3>Graduated from VIT University</h3>
+              <p>
+                Successfully completed B.Tech in Computer Science with hands-on
+                projects, internships, and industry exposure.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="timeline-item" data-year="2025">
+            <div class="timeline-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="timeline-content right">
+              <time datetime="2025-06" class="timeline-year">2025</time>
+              <h3>Software Consultant at Encora</h3>
+              <p>
+                Joined Encora as a Full-Stack Developer, working on enterprise
+                cloud solutions, microservices, and AI integrations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Future Goal -->
+          <div class="timeline-item" data-year="2026+">
+            <div class="timeline-icon future">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="timeline-content left">
+              <time class="timeline-year future">Future</time>
+              <h3>Building the Next Big Thing</h3>
+              <p>
+                Ready to lead innovative AI, cloud, and full-stack solutions in
+                a global team.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Get in Touch</h2>
+        <p class="contact-subtitle">
+          Feel free to reach out for collaborations or opportunities!
+        </p>
+
+        <form id="contactForm" class="contact-form">
+          <!-- Row 1: Name + Email -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name <span class="required">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Row 2: Phone + Subject (Added Subject) -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+91 9876543210"
+                pattern="[0-9]{10}"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject"
+                >Subject <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="e.g., Collaboration Opportunity"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Row 3: Color + Rating (Optional fields) -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="color">Favorite Color</label>
+              <input type="color" id="color" name="color" value="#0d6efd" />
+            </div>
+            <div class="form-group">
+              <label for="satisfaction">Rate my Portfolio (1-10)</label>
+              <input
+                type="range"
+                id="satisfaction"
+                name="satisfaction"
+                min="1"
+                max="10"
+                value="7"
+              />
+              <output for="satisfaction" id="rating-value">7</output>
+            </div>
+          </div>
+
+          <!-- Full Width: Message -->
+          <div class="form-group full-width">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Let's work together on something amazing!"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <!-- Notification Div (for Success/Error) -->
+        <div id="notification" class="notification hidden">
+          <p id="notification-message"></p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">FAQs</h2>
+        <details>
+          <summary>What technologies do you use?</summary>
+          <p>
+            I mainly work with Java, Spring Boot, Python, and cloud platforms.
+          </p>
+        </details>
+        <details>
+          <summary>Are you open to internships?</summary>
+          <p>Yes, I’m always excited to work on challenging projects.</p>
+        </details>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer aria-label="Footer with navigation and social links">
+      <div class="footer-container">
+        <div class="footer-top">
+          <h2 class="footer-brand">Yuva Sai</h2>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#timeline">Timeline</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a
+            href="https://github.com/perumallayuvasai"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub Profile"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/yuva-sai-perumalla"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn Profile"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/yuvasai.p"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram Profile"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="mailto:yuvasaiperumala.sai@example.com"
+            aria-label="Send Email"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright">
+          &copy; <time datetime="2025">2025</time> Yuva Sai. All Rights
+          Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize EmailJS
+      emailjs.init("wGijnkNrjPxUz8j7b");
+
+      // SendMail function
+      function SendMail(event) {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value || "N/A";
+        let subject = document.getElementById("subject").value;
+        let message = document.getElementById("message").value;
+        let satisfaction =
+          document.getElementById("satisfaction").value || "N/A";
+        let color = document.getElementById("color").value || "N/A";
+
+        if (!name || !email || !subject || !message) {
+          showNotification("Please fill out all required fields.", true);
+          return;
+        }
+
+        let params = {
+          name: name,
+          email: email,
+          phone: phone,
+          subject: subject,
+          message: message,
+          satisfaction: satisfaction,
+          color: color,
+        };
+
+        emailjs.send("service_2pd7mrd", "template_kpp8tz7", params).then(
+          function (response) {
+            showNotification("Email sent successfully!", false);
+            setTimeout(function () {
+              document.getElementById("contactForm").reset();
+              window.location.reload();
+            }, 2000);
+          },
+          function (error) {
+            showNotification("Failed to send email. Please try again.", true);
+          }
+        );
+      }
+
+      // Notification function (for success/error messages)
+      function showNotification(message, isError) {
+        const notification = document.getElementById("notification");
+        const messageEl = document.getElementById("notification-message");
+        messageEl.textContent = message;
+        notification.classList.remove("hidden");
+        notification.classList.add(isError ? "error" : "success");
+        setTimeout(() => {
+          notification.classList.add("hidden");
+        }, 4000);
+      }
+
+      // Attach event listener to form
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("contactForm")
+          .addEventListener("submit", SendMail);
+      });
+
+      // Hamburger Menu
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        const expanded = hamburger.getAttribute("aria-expanded") === "true";
+        hamburger.setAttribute("aria-expanded", !expanded);
+        navLinks.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          hamburger.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // Rating Output
+      const range = document.getElementById("satisfaction");
+      const output = document.getElementById("rating-value");
+      if (range && output) {
+        range.addEventListener("input", () => {
+          output.textContent = range.value;
+        });
+      }
+    </script>
+  </body>
+</html>
